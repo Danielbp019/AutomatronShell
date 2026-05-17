@@ -1,0 +1,8 @@
+7zip.7zip
+AIMP.AIMP
+OpenJS.NodeJS.LTS
+WiseCleaner.WiseDiskCleaner
+WiseCleaner.WiseRegistryCleaner
+flux.flux
+Microsoft.VisualStudioCode
+GitHub.GitHubDesktop

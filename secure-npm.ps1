@@ -91,7 +91,7 @@ $newLines | Set-Content $npmrc -Encoding UTF8
 
 Write-Host ""
 Write-Host "================================"
-Write-Host " Configuracion aplicada correctamente "
+Write-Host " Configuracion aplicada correctamente " -ForegroundColor Green
 Write-Host "================================"
 
 Write-Host ""
