@@ -1,5 +1,7 @@
 # install-apps.ps1
 
+Clear-Host
+
 Write-Host ""
 Write-Host "==============================="
 Write-Host " Instalacion de programas "
@@ -39,10 +41,10 @@ if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
         Write-Host "https://aka.ms/GetWinget"
         Write-Host ""
 
-        Write-Host "Presiona cualquier tecla para cerrar..."
+        Write-Host "Presiona cualquier tecla para volver al menu..."
         [void][System.Console]::ReadKey($true)
 
-        exit
+        return
     }
 
     # Verificar nuevamente
@@ -55,10 +57,10 @@ if (-not (Get-Command winget -ErrorAction SilentlyContinue)) {
         Write-Host "https://aka.ms/GetWinget"
         Write-Host ""
 
-        Write-Host "Presiona cualquier tecla para cerrar..."
+        Write-Host "Presiona cualquier tecla para volver al menu..."
         [void][System.Console]::ReadKey($true)
 
-        exit
+        return
     }
 }
 
@@ -69,10 +71,10 @@ if (-not (Test-Path $appsFile)) {
     Write-Host "No se encontro apps.txt" -ForegroundColor Red
     Write-Host ""
 
-    Write-Host "Presiona cualquier tecla para cerrar..."
+    Write-Host "Presiona cualquier tecla para volver al menu..."
     [void][System.Console]::ReadKey($true)
 
-    exit
+    return
 }
 
 $apps = Get-Content $appsFile
@@ -106,7 +108,7 @@ Write-Host "--------------------------------"
 Write-Host ""
 Write-Host "Proceso terminado." -ForegroundColor Green
 Write-Host ""
-Write-Host "Presiona cualquier tecla para cerrar..."
+Write-Host "Presiona cualquier tecla para volver al menu..."
 
 # Esperar tecla
 [void][System.Console]::ReadKey($true)

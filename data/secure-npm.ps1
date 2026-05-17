@@ -5,6 +5,8 @@
 # - Evita líneas duplicadas
 # - Conserva configuraciones existentes
 
+Clear-Host
+
 $npmrc = Join-Path $HOME ".npmrc"
 
 Write-Host "================================"
@@ -104,7 +106,7 @@ Get-Content $npmrc | ForEach-Object {
 
 Write-Host "--------------------------------"
 Write-Host ""
-Write-Host "Presiona cualquier tecla para cerrar..."
+Write-Host "Presiona cualquier tecla para volver al menu..."
 
 # Esperar tecla
 [void][System.Console]::ReadKey($true)

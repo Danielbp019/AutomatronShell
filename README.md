@@ -27,12 +27,13 @@ El menú permite:
 # Estructura del proyecto
 
 ```text
-scripts/
+AutomatonShell/
 │
 ├── menu.ps1
-├── secure-npm.ps1
-├── install-apps.ps1
-└── apps.txt
+└── data/
+    ├── secure-npm.ps1
+    ├── install-apps.ps1
+    └── apps.txt
 ```
 
 # Funcionalidades
