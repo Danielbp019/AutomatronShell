@@ -1,3 +1,15 @@
+# Configurar tamaño de ventana estándar al iniciar
+if ($Host.Name -eq "ConsoleHost") {
+    $WindowSize = $Host.UI.RawUI.WindowSize
+    $WindowSize.Width = 100
+    $WindowSize.Height = 30
+    $Host.UI.RawUI.WindowSize = $WindowSize
+    
+    $BufferSize = $Host.UI.RawUI.BufferSize
+    $BufferSize.Width = 100
+    $Host.UI.RawUI.BufferSize = $BufferSize
+}
+
 do {
     Clear-Host
 
