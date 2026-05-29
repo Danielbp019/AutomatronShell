@@ -19,7 +19,8 @@ do {
     Write-Host ""
     Write-Host "1 - Configurar opciones de seguridad de npm"
     Write-Host "2 - Instalar programas (Winget)"
-    Write-Host "3 - Salir"
+    Write-Host "3 - Limpiar logs del visor de eventos"
+    Write-Host "4 - Salir"
     Write-Host ""
 
     $option = Read-Host "Selecciona una opcion"
@@ -35,6 +36,10 @@ do {
         }
 
         "3" {
+            & "$PSScriptRoot\data\clear-logs.ps1"
+        }
+
+        "4" {
             exit
         }
 

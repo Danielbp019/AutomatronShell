@@ -5,6 +5,16 @@
 # - Evita líneas duplicadas
 # - Conserva configuraciones existentes
 
+if ($Host.Name -eq "ConsoleHost") {
+    $WindowSize = $Host.UI.RawUI.WindowSize
+    $WindowSize.Width = 100
+    $WindowSize.Height = 30
+    $Host.UI.RawUI.WindowSize = $WindowSize
+    $BufferSize = $Host.UI.RawUI.BufferSize
+    $BufferSize.Width = 100
+    $Host.UI.RawUI.BufferSize = $BufferSize
+}
+
 Clear-Host
 
 $npmrc = Join-Path $HOME ".npmrc"

@@ -21,7 +21,8 @@ El menú permite:
 ```text
 1 - Configurar opciones de seguridad de npm
 2 - Instalar programas (Winget)
-3 - Salir
+3 - Limpiar logs del visor de eventos
+4 - Salir
 ```
 
 # Estructura del proyecto
@@ -33,6 +34,7 @@ AutomatronShell/
 └── data/
     ├── secure-npm.ps1
     ├── install-apps.ps1
+    ├── clear-logs.ps1
     └── apps.txt
 ```
 
@@ -90,6 +92,21 @@ Cada línea representa el identificador oficial del paquete en `winget`.
 ## Objetivo
 
 Este menú busca automatizar la instalación de mis programas cuando formatee mi PC.
+
+## clear-logs.ps1
+
+Limpia los logs del visor de eventos de Windows (Application y System) usando `wevtutil`. Requiere ejecución como **Administrador**.
+
+El script:
+
+- Verifica que se tenga permisos de administrador
+- Limpia el log **Application**
+- Limpia el log **System**
+- Muestra un resumen con el resultado de cada operación
+
+## Objetivo
+
+Liberar espacio y eliminar registros innecesarios del visor de eventos antes de formatear o por mantenimiento.
 
 # Requisitos
 
