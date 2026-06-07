@@ -22,6 +22,7 @@ AutomatronShell/
     ├── install-apps.ps1 ← Instalar programas con winget
     ├── clear-logs.ps1  ← Limpiar Event Viewer
     ├── bootstrap.ps1   ← Descarga y ejecuta desde GitHub
+    ├── windows-config.ps1 ← Configurar Windows (DNS, nombre equipo)
     └── apps.txt        ← Lista de IDs winget
 ```
 

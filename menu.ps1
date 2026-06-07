@@ -20,7 +20,8 @@ do {
     Write-Host "1 - Configurar opciones de seguridad de npm"
     Write-Host "2 - Instalar programas (Winget)"
     Write-Host "3 - Limpiar logs del visor de eventos"
-    Write-Host "4 - Salir"
+    Write-Host "4 - Configurar Windows (DNS, nombre del equipo)"
+    Write-Host "5 - Salir"
     Write-Host ""
 
     $option = Read-Host "Selecciona una opcion"
@@ -40,6 +41,10 @@ do {
         }
 
         "4" {
+            & "$PSScriptRoot\data\windows-config.ps1"
+        }
+
+        "5" {
             exit
         }
 

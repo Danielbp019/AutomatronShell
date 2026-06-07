@@ -31,8 +31,9 @@ El menú permite:
 ```text
 1 - Configurar opciones de seguridad de npm
 2 - Instalar programas (Winget)
-3 - Limpiar logs del visor de eventos
-4 - Salir
+ 3 - Limpiar logs del visor de eventos
+ 4 - Configurar Windows (DNS, nombre del equipo)
+ 5 - Salir
 ```
 
 # Estructura del proyecto
@@ -46,6 +47,7 @@ AutomatronShell/
 │   ├── install-apps.ps1
 │   ├── clear-logs.ps1
 │   ├── bootstrap.ps1
+│   ├── windows-config.ps1
 │   └── apps.txt
 ```
 
@@ -121,6 +123,15 @@ El script:
 ## Objetivo
 
 Liberar espacio y eliminar registros innecesarios del visor de eventos antes de formatear o por mantenimiento.
+
+## windows-config.ps1
+
+Configuración de red y sistema básica post-formateo. Requiere permisos de **Administrador**.
+
+El script:
+
+- **DNS**: Cambia entre Google (`8.8.8.8`/`8.8.4.4`), Cloudflare (`1.1.1.1`/`1.0.0.1`) con IPv4 e IPv6, o restaura a DHCP
+- **Nombre del equipo**: Cambia el nombre del equipo y reinicia para aplicar los cambios
 
 # Requisitos
 
