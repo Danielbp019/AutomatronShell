@@ -4,6 +4,16 @@ Script de PowerShell para aplicar configuraciones de seguridad recomendadas en `
 
 # Cómo ejecutar
 
+## Bootstrap (descarga automática)
+
+Pega esto directamente en PowerShell para descargar, ejecutar y eliminar todo automáticamente:
+
+```powershell
+iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Danielbp019/AutomatronShell/main/data/bootstrap.ps1'))
+```
+
+## Manual
+
 El programa principal es:
 
 ```powershell
@@ -31,11 +41,12 @@ El menú permite:
 AutomatronShell/
 │
 ├── menu.ps1
-└── data/
-    ├── secure-npm.ps1
-    ├── install-apps.ps1
-    ├── clear-logs.ps1
-    └── apps.txt
+├── data/
+│   ├── secure-npm.ps1
+│   ├── install-apps.ps1
+│   ├── clear-logs.ps1
+│   ├── bootstrap.ps1
+│   └── apps.txt
 ```
 
 # Funcionalidades
