@@ -96,9 +96,12 @@ OpenJS.NodeJS.LTS
 flux.flux
 Microsoft.VisualStudioCode
 GitHub.GitHubDesktop
+Microsoft.VCRedist.2015+.x64
 ```
 
 Cada línea representa el identificador oficial del paquete en `winget`.
+
+La lista incluye todos los **Microsoft Visual C++ Redistributables** (2005-2015+ en x86/x64) para completar el entorno de ejecución de aplicaciones Windows.
 
 ## Objetivo
 
