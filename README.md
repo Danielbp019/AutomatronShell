@@ -2,6 +2,9 @@
 
 Script de PowerShell para aplicar configuraciones de seguridad recomendadas en `npm` y usar Winget con ajustes personales mediante un menú simple en consola.
 
+**Menú inicial:**
+![Menú](imgReadme/shell.jpg)
+
 # Cómo ejecutar
 
 ## Bootstrap (descarga automática)
@@ -31,9 +34,9 @@ El menú permite:
 ```text
 1 - Configurar opciones de seguridad de npm
 2 - Instalar programas (Winget)
- 3 - Limpiar logs del visor de eventos
- 4 - Configurar Windows (DNS, nombre del equipo)
- 5 - Salir
+3 - Limpiar logs del visor de eventos
+4 - Configurar Windows (DNS, nombre del equipo)
+5 - Salir
 ```
 
 # Estructura del proyecto
